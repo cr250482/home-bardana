@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bardana Wellness · Tu pausa, tu ritual</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bardana-cream': '#F4F3EE',
+            'bardana-green': '#233F1F',
+            'bardana-gold': '#D4A373',
+          },
+          fontFamily: {
+            'cormorant': ['"Cormorant Garamond"', 'serif'],
+            'sans': ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-bardana-cream text-bardana-green font-sans antialiased selection:bg-bardana-gold/20 min-h-screen flex flex-col relative">
+
+  <header class="py-6 px-6 md:px-12 flex justify-between items-center fixed w-full top-0 bg-bardana-cream/80 backdrop-blur-md z-40 border-b border-bardana-green/5">
+    <div class="font-cormorant text-2xl md:text-3xl tracking-tight text-bardana-green font-semibold">
+      Bardana Wellness
+    </div>
+    <nav class="hidden md:flex gap-8 text-[11px] tracking-[0.2em] uppercase font-medium text-bardana-green/70">
+      <a href="#filosofia" class="hover:text-bardana-gold transition-colors">Filosofía</a>
+      <a href="#servicios" class="hover:text-bardana-gold transition-colors">Servicios</a>
+      <a href="#contacto" class="hover:text-bardana-gold transition-colors">Contacto</a>
+    </nav>
+    <a href="https://wa.me/5491123909867?text=%C2%A1Hola!%20Quiero%20reservar%20un%20turno%20en%20el%20centro." target="_blank" class="text-[10px] uppercase tracking-widest border border-bardana-green bg-bardana-green text-bardana-cream px-5 py-2.5 hover:bg-[#31572C] transition-colors rounded-sm">
+      Reservar Turno
+    </a>
+  </header>
+
+  <main class="grow flex flex-col">
+    
+    <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+      <div class="absolute inset-0 z-0 overflow-hidden opacity-30">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=2000" alt="Fondo minimalista" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-bardana-cream/50 via-bardana-cream/80 to-bardana-cream"></div>
+      </div>
+
+      <div class="relative z-10 text-center max-w-4xl mx-auto fade-in-up">
+        <span class="font-sans text-bardana-gold text-[10px] md:text-xs tracking-[0.25em] font-semibold uppercase mb-6 block">
+          Estética & Bienestar Integral
+        </span>
+        <h1 class="font-cormorant text-5xl sm:text-7xl md:text-8xl leading-[1.05] tracking-tight mb-8 text-bardana-green font-light">
+          No hay apuro.<br/>
+          <span class="italic text-bardana-gold">Llegá, relajate, disfrutá.</span>
+        </h1>
+        <p class="font-sans text-sm md:text-lg text-bardana-green/80 max-w-2xl mx-auto leading-relaxed font-light tracking-wide mb-10">
+          Redefinimos la experience de cuidarte. Un espacio descontracturado donde tu sesión empieza con un buen café de especialidad o un matcha frío, y termina con resultados reales.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/5491123909867?text=%C2%A1Hola!%20Quiero%20reservar%20un%20turno%20en%20el%20centro." target="_blank" class="inline-flex font-sans tracking-[0.15em] text-xs uppercase font-medium bg-bardana-green text-bardana-cream py-4 px-10 hover:bg-[#31572C] transition-colors duration-300 w-full sm:w-auto justify-center rounded-sm">
+            Reservar Turno
+          </a>
+          <a href="#servicios" class="inline-flex font-sans tracking-[0.15em] text-xs uppercase font-medium border border-bardana-green text-bardana-green py-4 px-10 hover:bg-bardana-green hover:text-bardana-cream transition-colors duration-300 w-full sm:w-auto justify-center rounded-sm">
+            Ver Menú
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="filosofia" class="py-24 px-6 bg-white/50 border-y border-bardana-green/5">
+      <div class="max-w-4xl mx-auto text-center fade-in-up">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto text-bardana-gold mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h2 class="font-cormorant text-3xl md:text-5xl text-bardana-green mb-6 font-medium">El tiempo es el verdadero lujo</h2>
+        <p class="text-sm md:text-base text-[#6B7368] leading-relaxed font-light">
+          Olvidate de las salas de espera frías y los turnos a las corridas. En Bardana creamos un ecosistema pensado para bajar revoluciones. Llegá con margen, servite algo rico en nuestra barra, leé un rato y preparate para conectar con vos misma antes de pasar al gabinete.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="font-cormorant text-4xl md:text-6xl text-bardana-green">Nuestro Menú</h2>
+        <p class="text-xs text-bardana-gold tracking-wider uppercase mt-2">Hacé clic en cualquier servicio para ver su ritual y detalles</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="group fade-in-up">
+          <div class="aspect-[4/5] overflow-hidden mb-6 bg-white p-2 border border-bardana-green/5">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" alt="Masajes y Relax" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+          </div>
+          <span class="text-[10px] text-bardana-gold uppercase tracking-widest font-semibold block mb-2">Terapias Manuales</span>
+          <h3 class="font-cormorant text-3xl text-bardana-green mb-3">Relax & Armonía</h3>
+          <ul class="text-sm text-[#6B7368] space-y-3 mb-6 font-light">
+            <li onclick="openModal('descontracturantes')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Masajes Descontracturantes</li>
+            <li onclick="openModal('drenaje')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Drenaje Linfático Manual</li>
+            <li onclick="openModal('ayurveda')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Masaje Ayurveda</li>
+            <li onclick="openModal('headspa')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· HeadSpa Japonés (Terapia capilar)</li>
+          </ul>
+        </div>
+
+        <div class="group fade-in-up" style="transition-delay: 100ms;">
+          <div class="aspect-[4/5] overflow-hidden mb-6 bg-white p-2 border border-bardana-green/5">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Estética Facial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+          </div>
+          <span class="text-[10px] text-bardana-gold uppercase tracking-widest font-semibold block mb-2">Skin Care & Tech</span>
+          <h3 class="font-cormorant text-3xl text-bardana-green mb-3">Rostro Iluminado</h3>
+          <ul class="text-sm text-[#6B7368] space-y-3 mb-6 font-light">
+            <li onclick="openModal('faciales')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Limpiezas y Faciales Premium</li>
+            <li onclick="openModal('alquimia')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Alquimia (Dermoabrasión)</li>
+            <li onclick="openModal('fraxface')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· FraxFace (Radiofrecuencia)</li>
+            <li onclick="openModal('ipl')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Luz Pulsada (IPL)</li>
+            <li onclick="openModal('hifu-facial')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· HIFU 12D Facial</li>
+            <li onclick="openModal('lifting-pestanas')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Lifting de Pestañas</li>
+          </ul>
+        </div>
+
+        <div class="group fade-in-up" style="transition-delay: 200ms;">
+          <div class="aspect-[4/5] overflow-hidden mb-6 bg-white p-2 border border-bardana-green/5">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" alt="Tratamientos Corporales" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+          </div>
+          <span class="text-[10px] text-bardana-gold uppercase tracking-widest font-semibold block mb-2">Contorno & Textura</span>
+          <h3 class="font-cormorant text-3xl text-bardana-green mb-3">Modelación Corporal</h3>
+          <ul class="text-sm text-[#6B7368] space-y-3 mb-6 font-light">
+            <li onclick="openModal('corporales')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Tratamientos Corporales</li>
+            <li onclick="openModal('exfoliacion')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Exfoliación Corporal</li>
+            <li onclick="openModal('velaslim')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Velaslim Plus</li>
+            <li onclick="openModal('liposonix')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Liposonix (Adiposidad)</li>
+            <li onclick="openModal('mioup')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· MioUp (Muscular)</li>
+            <li onclick="openModal('soprano')" class="cursor-pointer hover:text-bardana-gold hover:underline transition-all">· Depilación Láser Soprano</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-20 px-6 bg-[#233F1F] text-bardana-cream mt-10">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        <div class="fade-in-up flex flex-col justify-center border-b md:border-b-0 md:border-r border-bardana-cream/10 pb-12 md:pb-0 md:pr-12 text-center md:text-left">
+          <span class="text-[10px] text-bardana-gold uppercase tracking-widest font-semibold block mb-3">Bienestar desde adentro</span>
+          <h3 class="font-cormorant text-3xl md:text-4xl mb-4">Suplementación Fuxion</h3>
+          <p class="text-sm text-bardana-cream/70 font-light leading-relaxed mb-6">
+            Creemos en la belleza integral. Por eso, te asesoramos y acompañamos con nutracéuticos y suplementos orgánicos Fuxion para potenciar tus resultados estéticos y tu energía diaria.
+          </p>
+          <a href="https://wa.me/5491123909867?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20asesorarme%20sobre%20los%20suplementos%20Fuxion." target="_blank" class="text-xs uppercase tracking-widest border-b border-bardana-gold text-bardana-gold pb-1 inline-block w-max mx-auto md:mx-0">Consultar catálogo</a>
+        </div>
+
+        <div class="fade-in-up flex flex-col justify-center md:pl-12 text-center md:text-left">
+          <span class="text-[10px] text-bardana-gold uppercase tracking-widest font-semibold block mb-3">El mejor regalo</span>
+          <h3 class="font-cormorant text-3xl md:text-4xl mb-4">Giftcards Bardana</h3>
+          <p class="text-sm text-bardana-cream/70 font-light leading-relaxed mb-6">
+            Regalá (o regalate) tiempo y mimos. Nuestras Giftcards son totalmente personalizables: podés elegir un tratamiento específico o un monto para que esa persona especial arme su propio ritual.
+          </p>
+          <a href="https://wa.me/5491123909867?text=%C2%A1Hola!%20Quiero%20regalar%20una%20Giftcard%20de%20Bardana." target="_blank" class="text-xs uppercase tracking-widest border-b border-bardana-gold text-bardana-gold pb-1 inline-block w-max mx-auto md:mx-0">Pedir una Giftcard</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contacto" class="bg-white border-t border-bardana-green/5 py-16 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="font-cormorant text-3xl text-bardana-green mb-6 font-semibold">Bardana Wellness</div>
+      <p class="font-sans text-sm text-bardana-green/60 mb-2">La Quebrada de Cardales / Pilar, Buenos Aires</p>
+      <p class="font-sans text-sm text-bardana-green/60 mb-8">WhatsApp: +54 9 11 2390-9867</p>
+      
+      <div class="font-sans text-[10px] text-bardana-green/40 uppercase tracking-widest border-t border-bardana-green/5 pt-8">
+        &copy; <span id="year"></span> Bardana Wellness. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5491123909867?text=%C2%A1Hola%20Bardana!%20Tengo%20una%20consulta%20sobre%20los%20servicios." 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-30 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <div id="service-modal" class="fixed inset-0 bg-[#233F1F]/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-bardana-cream w-full max-w-lg p-8 md:p-10 border border-bardana-green/10 shadow-2xl relative flex flex-col justify-between max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-6 right-6 text-bardana-green/60 hover:text-bardana-green transition-colors" aria-label="Cerrar ventana">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      
+      <div>
+        <span id="modal-category" class="text-[10px] text-bardana-gold uppercase tracking-widest font-semibold block mb-2">Categoría</span>
+        <h3 id="modal-title" class="font-cormorant text-3xl md:text-4xl text-bardana-green mb-4 font-light tracking-tight">Título del Servicio</h3>
+        <p id="modal-description" class="font-sans text-sm text-[#6B7368] leading-relaxed font-light mb-6">Descripción detallada del ritual del servicio.</p>
+        
+        <div class="border-t border-bardana-green/5 pt-4 mb-8">
+          <span class="text-[10px] text-bardana-green/40 uppercase tracking-widest block mb-1">Tu experiencia incluye</span>
+          <p class="text-xs text-bardana-green/80 italic font-serif">◊ Una pausa inicial de bienvenida acompañada de café de especialidad o matcha frío en nuestra barra.</p>
+        </div>
+      </div>
+      
+      <a id="modal-cta" href="#" target="_blank" class="block text-center font-sans tracking-[0.15em] text-xs uppercase font-medium bg-bardana-green text-bardana-cream py-4 w-full hover:bg-[#31572C] transition-colors duration-300 rounded-sm">
+        Solicitar Turno para este Ritual
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Base de datos de los detalles de los servicios
+    const serviceDetails = {
+      'descontracturantes': {
+        category: "Terapias Manuales",
+        title: "Masajes Descontracturantes",
+        description: "Un alivio profundo diseñado para liberar las tensiones musculares acumuladas por el estrés diario o el entrenamiento físico. Combinamos presiones firmes, maniobras de amasamiento y aceites vehiculares naturales adaptados a tus necesidades individuales. Perfecto para restaurar la movilidad y resetear cuerpo y mente."
+      },
+      'drenaje': {
+        category: "Terapias Manuales",
+        title: "Drenaje Linfático Manual",
+        description: "Una terapia sumamente suave y rítmica orientada a estimular el sistema linfático. Ideal para procesos post-operatorios, reducción de retención de líquidos, eliminación de toxinas y mejora de la circulación de retorno. Un tratamiento sutil que promueve un estado de ligereza y bienestar interno profundo."
+      },
+      'ayurveda': {
+        category: "Terapias Manuales",
+        title: "Masaje Ayurveda",
+        description: "Un viaje holístico milenario que busca armonizar los canales de energía corporal. Se realiza aplicando aceites templados con hierbas seleccionadas según tu constitución constitucional. Las maniobras fluidas y envolventes ayudan a desintoxicar el organismo, calmar el sistema nervioso y restaurar el equilibrio vital general."
+      },
+      'headspa': {
+        category: "Terapias Manuales",
+        title: "HeadSpa Japonés",
+        description: "Nuestra terapia capilar sensorial estrella. Consiste en una desintoxicación profunda del cuero cabelludo mediante microdermoabrasión, combinada con masajes craneofaciales y un circuito de vaporoterapia curada. Diseñado para estimular el folículo capilar, aliviar la fatiga mental y ofrecer una experiencia de desconexión absoluta."
+      },
+      'faciales': {
+        category: "Skin Care & Tech",
+        title: "Limpiezas & Faciales Premium",
+        description: "Rituales de higiene cutánea celular profunda combinados con nutrición intensiva. Analizamos tu tipo de piel para aplicar principios activos botánicos y vitaminas de alta pureza. Incluye extracciones suaves, máscaras descongestivas y masajes tensores faciales para devolverle la luminosidad natural a tu rostro."
+      },
+      'alquimia': {
+        category: "Skin Care & Tech",
+        title: "Alquimia Facial",
+        description: "Tratamiento de dermoabrasión avanzada con infusión simultánea de activos hidratantes y renovadores. Mediante puntas de diamante líquidas, pulimos suavemente las capas más superficiales de la piel mientras penetramos sueros personalizados de ácido hialurónico y antioxidantes. El resultado es un cutis radiante, uniforme y profundamente hidratado de forma inmediata."
+      },
+      'fraxface': {
+        category: "Skin Care & Tech",
+        title: "FraxFace (Radiofrecuencia Fraccionada)",
+        description: "Tecnología de vanguardia que genera microlesiones térmicas controladas en la dermis para activar la producción de colágeno y elastina nuevos. Es el tratamiento de elección para suavizar secuelas de acné, reducir líneas de expresión, estrías y tratar la flacidez facial con tiempos de recuperación mínimos."
+      },
+      'ipl': {
+        category: "Skin Care & Tech",
+        title: "Luz Pulsada (IPL)",
+        description: "Fotorrejuvenecimiento de alta precisión médica. La energía lumínica actúa atenuando manchas solares, emparejando el tono de la piel y controlando afecciones vasculares como arañitas y rosácea activa. Un tratamiento sumamente versátil para lucir una piel homogénea y revitalizada."
+      },
+      'hifu-facial': {
+        category: "Skin Care & Tech",
+        title: "HIFU 12D Facial",
+        description: "Ultrasonido focalizado de ultra-precisión (MPT) que actúa en las capas más profundas de la piel, alcanzando el plano muscular (SMAS). Funciona como un lifting sin cirugía, tensando el óvalo facial, reduciendo papada y suavizando arrugas de forma sostenida en el tiempo, sin requerir reposo."
+      },
+      'lifting-pestanas': {
+        category: "Skin Care & Tech",
+        title: "Lifting de Pestañas",
+        description: "Curvatura y realce natural de tus propias pestañas desde la raíz. Acompañado de un baño de queratina y nutrición profunda para fortalecer la fibra. Un diseño de mirada limpio, sutil y elegante que resalta tus facciones de manera orgánica y sin necesidad de extensiones artificiales."
+      },
+      'corporales': {
+        category: "Contorno & Textura",
+        title: "Tratamientos Corporales",
+        description: "Protocolos integrales diseñados a medida. Combinamos masajes modeladores, activos tensores y botas de presoterapia para trabajar de manera sinérgica la celulitis, la flacidez y mejorar el retorno venoso, adaptando cada sesión a los objetivos puntuales de tu cuerpo."
+      },
+      'exfoliacion': {
+        category: "Contorno & Textura",
+        title: "Exfoliación Corporal Completa",
+        description: "Un ritual de renovación total para la piel del cuerpo. Eliminamos células muertas mediante un pulido con partículas orgánicas naturales, seguido de una ducha reconfortante y una hidratación profunda con mantecas botánicas perfumadas. Deja la piel extremadamente suave, satinada y oxigenada."
+      },
+      'velaslim': {
+        category: "Contorno & Textura",
+        title: "Velaslim Plus",
+        description: "Modelación corporal avanzada no invasiva. Combina radiofrecuencia, láser infrarrojo, vacumterapia y masaje de rodillos en un solo cabezal. Es sumamente efectivo para reducir el contorno corporal, disolver adipocitos localizados y mejorar drásticamente la textura de la piel con celulitis."
+      },
+      'liposonix': {
+        category: "Contorno & Textura",
+        title: "Liposonix Corporal",
+        description: "Ultrasonido focalizado de alta intensidad (HIFU) enfocado exclusivamente en la destrucción permanente de las células grasas rebeldes en zonas localizadas como abdomen y flancos. Ideal para moldear la figura de forma definitiva en pocas sesiones."
+      },
+      'mioup': {
+        category: "Contorno & Textura",
+        title: "MioUp (Estimulación Muscular)",
+        description: "Ondas electromagnéticas enfocadas de alta intensidad que inducen contracciones musculares supramáximas, imposibles de lograr mediante el ejercicio convencional. Ideal para tonificar, levantar glúteos, fortalecer abdomen y complementar tus rutinas de entrenamiento de forma eficiente."
+      },
+      'soprano': {
+        category: "Contorno & Textura",
+        title: "Depilación Láser Soprano",
+        description: "El estándar de oro mundial en depilación definitiva. Su tecnología de barrido trionda simultánea permite tratar todos los fototipos de piel de forma totalmente segura, indolora y eficaz durante todo el año, reduciendo la duración del tratamiento a la mitad del tiempo."
+      }
+    };
+
+    // Funciones para controlar el modal
+    function openModal(key) {
+      const data = serviceDetails[key];
+      if (!data) return;
+
+      document.getElementById('modal-category').textContent = data.category;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-description').textContent = data.description;
+      
+      const textWhatsapp = `¡Hola! Me interesó el ritual de *${data.title}* y quiero consultar turnos disponibles.`;
+      document.getElementById('modal-cta').href = `https://wa.me/5491123909867?text=${encodeURIComponent(textWhatsapp)}`;
+
+      const modal = document.getElementById('service-modal');
+      modal.classList.remove('pointer-events-none', 'opacity-0');
+      modal.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('service-modal');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+    }
+
+    // Cerrar modal al hacer clic fuera de la tarjeta
+    document.getElementById('service-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // IntersectionObserver para animaciones de scroll
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
