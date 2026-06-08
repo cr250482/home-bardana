@@ -82,7 +82,9 @@
         }
         .hero-overlay {
             position: absolute; inset: 0; z-index: 1;
-            background: linear-gradient(180deg, rgba(61,74,56,0.45) 0%, rgba(61,74,56,0.30) 40%, rgba(61,74,56,0.55) 100%);
+            background:
+                linear-gradient(180deg, rgba(61,74,56,0.55) 0%, rgba(61,74,56,0.40) 35%, rgba(61,74,56,0.65) 100%),
+                radial-gradient(ellipse 90% 70% at 50% 55%, rgba(45,55,40,0.45), transparent 75%);
         }
 
         /* Animaciones suaves */
@@ -150,7 +152,7 @@
                 Tecnología de clase mundial y un trato que se toma su tiempo. Tratamientos faciales, corporales y depilación láser definitiva.
             </p>
             <div class="fade-up flex flex-col sm:flex-row justify-center gap-4" style="animation-delay:0.55s">
-                <a href="https://api.belash-pro.com/book/bardana-wellness-20b3" target="_blank" class="bg-cream hover:bg-white text-forest font-light px-9 py-4 rounded-full transition-all duration-500 text-sm tracking-[0.12em] uppercase hover:shadow-2xl">
+                <a href="https://api.belash-pro.com/book/bardana-wellness-20b3" target="_blank" class="hidden sm:inline-block bg-cream hover:bg-white text-forest font-light px-9 py-4 rounded-full transition-all duration-500 text-sm tracking-[0.12em] uppercase hover:shadow-2xl">
                     Reservar turno
                 </a>
                 <a href="#servicios" class="border border-cream/50 hover:border-cream text-cream font-light px-9 py-4 rounded-full transition-all duration-500 text-sm tracking-[0.12em] uppercase">
