@@ -269,17 +269,45 @@
     </footer>
 
     <script>
-        // Forzar reproducción del video del hero (algunos navegadores móviles lo necesitan)
+        // Forzar reproducción del video del hero (navegadores móviles suelen bloquear autoplay)
         (function() {
             var v = document.querySelector('.hero-video');
             if (!v) return;
+
+            // Asegurar las condiciones que exigen los navegadores para autoplay
+            v.muted = true;
+            v.defaultMuted = true;
+            v.setAttribute('muted', '');
+            v.playsInline = true;
+
             var tryPlay = function() {
+                if (!v.paused) return;
                 var p = v.play();
-                if (p && p.catch) { p.catch(function(){}); } // si el navegador bloquea autoplay, queda el poster
+                if (p && p.catch) { p.catch(function(){}); }
             };
+
+            // Intentar en varios momentos del ciclo de carga
+            v.addEventListener('loadeddata', tryPlay);
             v.addEventListener('canplay', tryPlay);
-            document.addEventListener('touchstart', tryPlay, { once: true });
-            document.addEventListener('click', tryPlay, { once: true });
+            v.addEventListener('canplaythrough', tryPlay);
+            window.addEventListener('load', tryPlay);
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden) tryPlay();
+            });
+
+            // Último recurso: cualquier interacción del usuario dispara el play
+            ['touchstart','click','scroll'].forEach(function(ev) {
+                document.addEventListener(ev, tryPlay, { once: true, passive: true });
+            });
+
+            // Reintentos cortos por si el navegador tarda en habilitar
+            var attempts = 0;
+            var timer = setInterval(function() {
+                attempts++;
+                tryPlay();
+                if (!v.paused || attempts > 8) clearInterval(timer);
+            }, 400);
+
             tryPlay();
         })();
 
